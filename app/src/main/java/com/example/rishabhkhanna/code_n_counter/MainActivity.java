@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -55,7 +56,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         RotateAnimation rotateAnimation = new RotateAnimation(START_FROM,END_1, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-        
+        rotateAnimation.setInterpolator(new LinearInterpolator());
+        rotateAnimation.setDuration((long)10000);
+        rotateAnimation.setRepeatCount(Animation.INFINITE);
+        im1.setAnimation(rotateAnimation);
+
+        RotateAnimation rotateAnimation1 = new RotateAnimation(START_FROM,END_2, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        rotateAnimation1.setRepeatCount(Animation.INFINITE);
+        rotateAnimation1.setInterpolator(new LinearInterpolator());
+        rotateAnimation1.setDuration((long)10000);
+        im2.setAnimation(rotateAnimation1);
 
     }
 }
