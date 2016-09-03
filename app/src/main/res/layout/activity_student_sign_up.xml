@@ -3,103 +3,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:padding="10sp"
     tools:context="com.example.rishabhkhanna.code_n_counter.UIs.StudentSignUp"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Name"
-        android:id="@+id/textViewName" />
+   
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
+        android:textSize="20sp"
+        android:layout_marginTop="25sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:textColorHint="@color/grey"
+        android:backgroundTint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="Name"
+        android:textColor="@color/white"
         android:id="@+id/editTextName" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Password"
-        android:id="@+id/textViewPassword" />
+  
 
     <EditText
+        android:backgroundTint="@color/grey"
         android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:textColorHint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="Password"
+
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
         android:ems="10"
+        android:textColor="@color/white"
         android:id="@+id/editTextPassword" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Email"
-        android:id="@+id/textView" />
+   
 
     <EditText
         android:layout_width="match_parent"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:textColorHint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="E-mail"
+        android:backgroundTint="@color/grey"
         android:id="@+id/editTextEmail" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Contact"
-        android:id="@+id/textViewContact" />
-
+   
     <EditText
         android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:backgroundTint="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="Contact No."
+
         android:layout_height="wrap_content"
         android:id="@+id/editTextContact" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Institute"
-        android:id="@+id/textViewInstitute" />
-
+   
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:textColorHint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="Institute"
+        android:backgroundTint="@color/grey"
         android:ems="10"
         android:id="@+id/editTextInstitute" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Age"
-        android:id="@+id/textViewAge" />
-
+   
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey"
         android:inputType="textPostalAddress"
+        android:textSize="20sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:textColorHint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="Age"
+
         android:ems="10"
+        android:textColor="@color/white"
         android:id="@+id/editTextAge" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Address"
-        android:id="@+id/textViewAddress" />
-
     <EditText
         android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:padding="7sp"
+        android:textColorHint="@color/grey"
+        android:textColorHighlight="@color/grey"
+        android:hint="Postal Address"
+        android:backgroundTint="@color/grey"
+
         android:layout_height="wrap_content"
         android:id="@+id/editTextAddress" />
+
     <RelativeLayout
+        android:layout_marginTop="20sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <Button
             android:layout_width="95dp"
             android:layout_height="wrap_content"
