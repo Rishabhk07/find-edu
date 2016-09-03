@@ -8,26 +8,63 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/red"
+
     tools:context="com.example.rishabhkhanna.code_n_counter.MainActivity">
 
-    
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Teacher Signup"
-        android:id="@+id/teacherSignup"
-        />
-
-    <Button
-        android:layout_below="@id/teacherSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="student Signup"
-        android:id="@+id/studentSignup"
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:id="@+id/image"
+        android:src="@drawable/index"
+        android:layout_gravity="center"
+        android:layout_marginTop="50sp"
         />
 
     <TextView
-        android:layout_width=""
-        android:layout_height="" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Education Portal"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:typeface="serif"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:padding="10sp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_weight="1"
+            android:background="@drawable/button_style1"
+            android:textColor="@drawable/button_style1_text"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher Signup"
+            android:id="@+id/teacherSignup"
+            android:layout_marginRight="10sp"
+            />
+
+        <Button
+            android:textSize="15sp"
+            android:textColor="@drawable/button_style2_text"
+            android:background="@drawable/button_style2"
+            android:layout_weight="1"
+            android:layout_marginLeft="10sp"
+            android:layout_below="@id/teacherSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="student Signup"
+            android:id="@+id/studentSignup"
+            />
+
+
+    </LinearLayout>
+
+
 </LinearLayout>
