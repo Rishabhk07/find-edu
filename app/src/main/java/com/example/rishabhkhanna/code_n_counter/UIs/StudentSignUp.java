@@ -1,5 +1,6 @@
 package com.example.rishabhkhanna.code_n_counter.UIs;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,7 +51,8 @@ public class StudentSignUp extends AppCompatActivity {
         buttonOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
+                Intent intent = new Intent(StudentSignUp.this,Student_Login.class);
+                startActivity(intent);
             }
         });
 

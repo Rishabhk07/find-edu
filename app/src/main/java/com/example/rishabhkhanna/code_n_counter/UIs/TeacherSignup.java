@@ -77,7 +77,8 @@ public class TeacherSignup extends AppCompatActivity {
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(TeacherSignup.this,Teacher_Login.class);
+                startActivity(intent);
             }
         });
 
