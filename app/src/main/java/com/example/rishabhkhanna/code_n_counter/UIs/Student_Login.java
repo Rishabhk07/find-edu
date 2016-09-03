@@ -60,6 +60,7 @@ public class Student_Login extends AppCompatActivity {
         email = (EditText) findViewById(R.id.loginIDstudent);
         password = (EditText) findViewById(R.id.passWord);
         submit = (TextView) findViewById(R.id.sign_IN);
+        signup = (TextView) findViewById(R.id.notRegistered);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +85,14 @@ public class Student_Login extends AppCompatActivity {
 
                             }
                         });
+            }
+        });
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Student_Login.this , StudentSignUp.class);
+                startActivity(i);
             }
         });
 

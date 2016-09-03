@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rishabhkhanna.code_n_counter.Models.student;
@@ -24,6 +25,7 @@ public class StudentSignUp extends AppCompatActivity {
 
     public static final String TAG = "StudentData";
     EditText editTextName,editTextPassword,editTextAddress,editTextInstitute,editTextAge,editTextContact,editTextEmail;
+
     Button buttonSubmit;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
@@ -43,6 +45,9 @@ public class StudentSignUp extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         buttonSubmit  = (Button) findViewById(R.id.buttonSubmit);
+
+
+
 
 
         mAuth  = FirebaseAuth.getInstance();

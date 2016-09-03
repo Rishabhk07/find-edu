@@ -56,6 +56,7 @@ public class Create_new_event extends Fragment {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference ref = firebaseDatabase.getReference("events");
 
+
         ref.keepSynced(true);
 
 
@@ -63,17 +64,23 @@ public class Create_new_event extends Fragment {
             @Override
             protected void populateView(View v, Event model, int position) {
 
+
+
                 TextView ename = (TextView) v.findViewById(R.id.eventNameCardView);
                 TextView teacherMail = (TextView) v.findViewById(R.id.teacheremailCardView);
                 TextView date = (TextView) v.findViewById(R.id.dateCardView);
                 TextView description = (TextView) v.findViewById(R.id.descriptionCardView);
 
-                ename.setText(model.getEventName());
-                teacherMail.setText(model.getTeacherId());
-                date.setText(model.getDate());
-                description.setText(model.getDescription());
 
-                mAdapter.notifyDataSetChanged();
+
+
+
+                    teacherMail.setText(model.getTeacherId());
+                    date.setText(model.getDate());
+                    description.setText(model.getDescription());
+
+                    mAdapter.notifyDataSetChanged();
+
 
             }
 

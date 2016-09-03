@@ -47,11 +47,33 @@
             android:id="@+id/topicEvent"
             />
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/min"
+            android:hint="minimum students"
+            android:inputType="number"
+            />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add Location"
+            android:layout_weight="1"
+            android:id="@+id/addLocation"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="add Event"
-            android:id="@+id/addEvent"/>
+            android:id="@+id/addEvent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

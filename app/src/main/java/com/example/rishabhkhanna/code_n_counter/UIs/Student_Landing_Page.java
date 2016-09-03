@@ -10,7 +10,9 @@ import com.example.rishabhkhanna.code_n_counter.R;
 
 public class Student_Landing_Page extends AppCompatActivity {
 
+
     AHBottomNavigation bottomNavigation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +30,7 @@ public class Student_Landing_Page extends AppCompatActivity {
         bottomNavigation.addItem(item3);
         bottomNavigation.addItem(item4);
         bottomNavigation.setBackgroundColor(Color.parseColor("#FEFEFE"));
+
+
     }
 }
