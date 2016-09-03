@@ -49,7 +49,7 @@
                 android:textColorHint="@color/grey"
                 android:backgroundTint="@color/grey"
                 android:textColorHighlight="@color/grey"
-                android:hint="Email"
+                android:hint="E-mail"
                 android:textColor="@color/white"
                 android:id="@+id/emailTeacher"
                 android:layout_gravity="center_horizontal"
@@ -156,38 +156,22 @@
                 android:id="@+id/passwordTeacher"
 
                 />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="10sp"
-                android:layout_height="wrap_content">
-
 
                 <Button
+                    android:layout_marginTop="10sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SignUp"
                     android:layout_marginLeft="20sp"
                     android:layout_marginRight="20sp"
-                    android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:id="@+id/signupTeacher"
-                    />
-
-                <Button
-
-                    android:layout_marginLeft="20sp"
-                    android:layout_marginRight="20sp"
-
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Log out"
-                    android:id="@+id/logOut"
+                    android:background="@drawable/button_style_grey"
+                    android:textColor="@drawable/button_style_grey_text"
                     />
 
 
 
-            </LinearLayout>
 
 
 

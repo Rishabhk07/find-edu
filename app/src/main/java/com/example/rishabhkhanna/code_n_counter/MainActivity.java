@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.rishabhkhanna.code_n_counter.UIs.StudentSignUp;
+import com.example.rishabhkhanna.code_n_counter.UIs.Student_Login;
 import com.example.rishabhkhanna.code_n_counter.UIs.TeacherSignup;
+import com.example.rishabhkhanna.code_n_counter.UIs.Teacher_Login;
 
 public class MainActivity extends AppCompatActivity {
     Button teacher;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent i = new Intent(MainActivity.this ,TeacherSignup.class);
+                Intent i = new Intent(MainActivity.this ,Teacher_Login.class);
                 startActivity(i);
 
             }
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this , StudentSignUp.class);
+                Intent i = new Intent(MainActivity.this , Student_Login.class);
                 startActivity(i);
             }
         });

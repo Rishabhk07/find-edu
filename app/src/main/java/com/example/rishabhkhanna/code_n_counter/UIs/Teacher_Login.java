@@ -23,7 +23,7 @@ public class Teacher_Login extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthstateListner;
 
     public EditText email,password;
-    public TextView submit;
+    public TextView submit,signup;
 
 
     @Override
@@ -31,8 +31,19 @@ public class Teacher_Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher__login);
         email = (EditText) findViewById(R.id.loginID);
+
         password = (EditText) findViewById(R.id.passWordTeacher);
         submit = (TextView) findViewById(R.id.sign_IN_Teacher);
+
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Teacher_Login.this,TeacherSignup.class);
+                startActivity(intent);
+            }
+        });
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

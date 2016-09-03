@@ -18,10 +18,10 @@ public class Student_Landing_Page extends AppCompatActivity {
         setContentView(R.layout.activity_landing__page);
         bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigation);
 
-        AHBottomNavigationItem item1 = new AHBottomNavigationItem("techers" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimaryDark);
-        AHBottomNavigationItem item2 = new AHBottomNavigationItem("users" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimary);
+        AHBottomNavigationItem item1 = new AHBottomNavigationItem("Teachers" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimaryDark);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem("Users" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimary);
         AHBottomNavigationItem item3 = new AHBottomNavigationItem("Topics" ,R.drawable.ic_account_circle_grey_700_18dp, R.color.colorAccent);
-        AHBottomNavigationItem item4 = new AHBottomNavigationItem("find" ,R.drawable.ic_account_circle_grey_700_18dp, R.color.colorBottomNavigationNotification);
+        AHBottomNavigationItem item4 = new AHBottomNavigationItem("Find" ,R.drawable.ic_account_circle_grey_700_18dp, R.color.colorBottomNavigationNotification);
 
         bottomNavigation.addItem(item1);
         bottomNavigation.addItem(item2);

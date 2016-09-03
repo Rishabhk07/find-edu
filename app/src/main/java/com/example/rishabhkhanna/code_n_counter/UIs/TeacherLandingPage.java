@@ -74,7 +74,5 @@ public class TeacherLandingPage extends AppCompatActivity {
 
 
 
-
-
     }
 }

@@ -1,5 +1,6 @@
 package com.example.rishabhkhanna.code_n_counter.UIs;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class StudentSignUp extends AppCompatActivity {
 
     public static final String TAG = "StudentData";
     EditText editTextName,editTextPassword,editTextAddress,editTextInstitute,editTextAge,editTextContact,editTextEmail;
-    Button buttonSubmit,buttonOut;
+    Button buttonSubmit;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
 
@@ -42,17 +43,10 @@ public class StudentSignUp extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         buttonSubmit  = (Button) findViewById(R.id.buttonSubmit);
-        buttonOut = (Button) findViewById(R.id.buttonOut);
+
 
         mAuth  = FirebaseAuth.getInstance();
 
-
-        buttonOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-            }
-        });
 
         mAuthListner = new FirebaseAuth.AuthStateListener() {
             @Override
