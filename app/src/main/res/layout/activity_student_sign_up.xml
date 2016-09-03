@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+
     android:background="@drawable/back"
+
     android:padding="10sp"
     tools:context="com.example.rishabhkhanna.code_n_counter.UIs.StudentSignUp"
     android:orientation="vertical">
-
-   
 
     <EditText
         android:layout_width="match_parent"
@@ -40,7 +41,7 @@
         android:hint="Password"
 
         android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
+        android:inputType="textPassword"
         android:ems="10"
         android:textColor="@color/white"
         android:id="@+id/editTextPassword" />
