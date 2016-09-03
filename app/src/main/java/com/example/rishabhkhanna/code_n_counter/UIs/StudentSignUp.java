@@ -24,7 +24,7 @@ public class StudentSignUp extends AppCompatActivity {
 
     public static final String TAG = "StudentData";
     EditText editTextName,editTextPassword,editTextAddress,editTextInstitute,editTextAge,editTextContact,editTextEmail;
-    Button buttonSubmit,buttonOut;
+    Button buttonSubmit;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
 
@@ -43,18 +43,10 @@ public class StudentSignUp extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         buttonSubmit  = (Button) findViewById(R.id.buttonSubmit);
-        buttonOut = (Button) findViewById(R.id.buttonOut);
+
 
         mAuth  = FirebaseAuth.getInstance();
 
-
-        buttonOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StudentSignUp.this,Student_Login.class);
-                startActivity(intent);
-            }
-        });
 
         mAuthListner = new FirebaseAuth.AuthStateListener() {
             @Override

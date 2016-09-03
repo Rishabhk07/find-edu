@@ -33,7 +33,7 @@ public class TeacherSignup extends AppCompatActivity {
     EditText ageTeacher;
     EditText passwordTeacher;
     Button signup;
-    Button logOut;
+
 
 
 
@@ -54,12 +54,6 @@ public class TeacherSignup extends AppCompatActivity {
         ageTeacher = (EditText) findViewById(R.id.age);
         passwordTeacher = (EditText) findViewById(R.id.passwordTeacher);
         signup = (Button) findViewById(R.id.signupTeacher);
-        logOut = (Button) findViewById(R.id.logOut);
-
-
-
-
-
 
         mAuthListner = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -74,13 +68,6 @@ public class TeacherSignup extends AppCompatActivity {
             }
         };
 
-        logOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TeacherSignup.this,Teacher_Login.class);
-                startActivity(intent);
-            }
-        });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
