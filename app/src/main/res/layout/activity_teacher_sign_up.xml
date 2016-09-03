@@ -171,6 +171,8 @@
                     android:layout_marginRight="20sp"
                     android:layout_weight="1"
                     android:id="@+id/signupTeacher"
+                    android:background="@drawable/button_style_grey"
+                    android:textColor="@drawable/button_style_grey_text"
                     />
 
                 <Button
@@ -178,6 +180,8 @@
                     android:layout_marginLeft="20sp"
                     android:layout_marginRight="20sp"
 
+                    android:background="@drawable/button_style_grey"
+                    android:textColor="@drawable/button_style_grey_text"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
