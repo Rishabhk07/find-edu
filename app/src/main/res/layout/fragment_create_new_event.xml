@@ -6,11 +6,22 @@
     tools:context="com.example.rishabhkhanna.code_n_counter.Fragments.TeacherFragments.Create_new_event">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create New EVents"
-        android:textColor="#333"/>
+
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/Eventlist"-->
+        <!--&gt;-->
+
+
+
+    <!--</ListView>-->
+
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/listViewEvents"></ListView>
+
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,6 +29,7 @@
         android:layout_margin="16dp"
         app:layout_anchorGravity="bottom|right|end"
         android:id="@+id/floating"/>
+
 
 
 </FrameLayout>

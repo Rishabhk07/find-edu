@@ -24,7 +24,7 @@ public class New_Event extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new__event);
 
-        eventName = (EditText) findViewById(R.id.eventName);
+        eventName = (EditText) findViewById(R.id.eventNameCardView);
         teacherEmail = (EditText) findViewById(R.id.emailEventTeacher);
         date = (EditText) findViewById(R.id.dateEvent);
         description = (EditText) findViewById(R.id.descriptionEvent);
@@ -42,7 +42,9 @@ public class New_Event extends AppCompatActivity {
                 String edescription = description.getText().toString();
                 String etopic= topic.getText().toString();
 
-                Event event = new Event(ename , eteacheremail , edate, edescription ,etopic);
+
+
+                Event event = new Event(ename , eteacheremail , edate, edescription ,etopic );
 
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference ref = firebaseDatabase.getReference("events");

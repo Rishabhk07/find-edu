@@ -25,7 +25,9 @@ public class Event {
         this.date = date;
         this.description = description;
         this.topic = topic;
+
     }
+
 
     public String getEventName() {
         return eventName;
@@ -41,5 +43,25 @@ public class Event {
 
     public String getTopic() {
         return topic;
+    }
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+
+    public void setTeacherId(String teacherId) {
+        this.teacherId = teacherId;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 }

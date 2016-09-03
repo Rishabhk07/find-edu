@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:hint="Event name"
         android:ems="10"
-        android:id="@+id/eventName"
+        android:id="@+id/eventNameCardView"
         />
         <EditText
             android:layout_width="wrap_content"
