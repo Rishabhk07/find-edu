@@ -17,7 +17,7 @@
         android:id="@+id/image"
         android:src="@drawable/index"
         android:layout_gravity="center"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="70sp"
         />
 
     <TextView
@@ -62,6 +62,44 @@
             android:text="student Signup"
             android:id="@+id/studentSignup"
             />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:text="Powered by Boosters"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+
+            />
+        <ImageView
+            android:layout_width="75sp"
+            android:layout_height="75sp"
+            android:layout_marginLeft="10sp"
+            android:src="@drawable/blue"
+            android:id="@+id/image_1"
+            />
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginLeft="5sp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/red"
+            android:id="@+id/image_2"
+            />
+
 
 
     </LinearLayout>
