@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.rishabhkhanna.code_n_counter.UIs.StudentSignUp;
 import com.example.rishabhkhanna.code_n_counter.UIs.TeacherSignup;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i = new Intent(MainActivity.this , );
-//                startActivity(i);
+                Intent i = new Intent(MainActivity.this , StudentSignUp.class);
+                startActivity(i);
             }
         });
 

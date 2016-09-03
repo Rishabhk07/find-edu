@@ -16,8 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".UIs.Landing_Page" />
-        <activity android:name=".UIs.TeacherSignup"></activity>
-        <activity android:name=".UIs.TeacherLandingPage"></activity>
+        <activity android:name=".UIs.TeacherSignup" />
+        <activity android:name=".UIs.TeacherLandingPage" />
+        <activity android:name=".UIs.StudentSignUp"></activity>
     </application>
 
 </manifest>
