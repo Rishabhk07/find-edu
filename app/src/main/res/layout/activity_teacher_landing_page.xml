@@ -73,7 +73,7 @@ tools:context=".UIs.Student_Landing_Page">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:id="@+id/E-mail"
+            android:id="@+id/E_mail"
             />
 
         <EditText

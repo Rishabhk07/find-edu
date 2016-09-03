@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:inputType="text"
-                    android:id="@+id/passWord"
+                    android:id="@+id/passWordTeacher"
                     android:ems="15"
                     />
             </LinearLayout>
@@ -104,7 +104,7 @@
 
         <TextView
             android:layout_marginTop="10sp"
-            android:id="@+id/sign_IN"
+            android:id="@+id/sign_IN_Teacher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SIGN IN"

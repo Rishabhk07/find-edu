@@ -49,7 +49,7 @@
                 android:textColorHint="@color/grey"
                 android:backgroundTint="@color/grey"
                 android:textColorHighlight="@color/grey"
-                android:hint="E-mail"
+                android:hint="Email"
                 android:textColor="@color/white"
                 android:id="@+id/emailTeacher"
                 android:layout_gravity="center_horizontal"

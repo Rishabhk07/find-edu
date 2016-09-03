@@ -69,7 +69,7 @@
                    android:layout_height="wrap_content"
                    android:textColor="@color/black"
                    android:inputType="text"
-                   android:id="@+id/loginID"
+                   android:id="@+id/loginIDstudent"
                    android:ems="15"
                    />
             </LinearLayout>
