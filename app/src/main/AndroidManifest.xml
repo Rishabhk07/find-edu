@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UIs.Landing_Page" />
+        <activity android:name=".UIs.Student_Landing_Page" />
         <activity android:name=".UIs.TeacherSignup" />
         <activity android:name=".UIs.TeacherLandingPage" />
         <activity android:name=".UIs.StudentSignUp"></activity>

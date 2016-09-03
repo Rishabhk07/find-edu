@@ -8,7 +8,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.rishabhkhanna.code_n_counter.R;
 
-public class Landing_Page extends AppCompatActivity {
+public class Student_Landing_Page extends AppCompatActivity {
 
     AHBottomNavigation bottomNavigation;
 
