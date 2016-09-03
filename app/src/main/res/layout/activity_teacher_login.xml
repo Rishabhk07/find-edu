@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rishabhkhanna.code_n_counter.UIs.teacherLogin"
+    android:background="#333">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+       <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="username"
+           android:ems="10"
+           android:layout_gravity="center"
+           android:id="@+id/usernameTeacher"
+           />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailTeacher"
+            android:layout_gravity="center_horizontal"
+            android:hint="email"
+            />
+
+        <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="contact"
+           android:ems="10"
+           android:layout_gravity="center"
+            android:inputType="phone"
+            android:id="@+id/contactTeacher"
+           />
+
+        <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="Qualification"
+           android:ems="10"
+           android:layout_gravity="center"
+            android:inputType="text"
+            android:id="@+id/qualificationTeacher"
+           />
+        <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="Working At"
+           android:ems="10"
+           android:layout_gravity="center"
+            android:inputType="text"
+            android:id="@+id/workingAtTeacher"
+
+           />
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:id="@+id/age"
+
+        />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:inputType="textPassword"
+            android:id="@+id/passwordTeacher"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:id="@+id/signupTeacher"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
