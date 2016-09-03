@@ -6,28 +6,39 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.rishabhkhanna.code_n_counter.UIs.Landing_Page;
+import com.example.rishabhkhanna.code_n_counter.UIs.TeacherSignup;
 
 public class MainActivity extends AppCompatActivity {
-    Button start;
+    Button teacher;
+    Button student;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        start = (Button) findViewById(R.id.next);
+        teacher = (Button) findViewById(R.id.teacherSignup);
+        student = (Button) findViewById(R.id.studentSignup);
 
-        start.setOnClickListener(new View.OnClickListener() {
+        teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                Intent i = new Intent(MainActivity.this , Landing_Page.class);
+                Intent i = new Intent(MainActivity.this ,TeacherSignup.class);
                 startActivity(i);
 
             }
         });
+
+        student.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent i = new Intent(MainActivity.this , );
+//                startActivity(i);
+            }
+        });
+
 
     }
 }

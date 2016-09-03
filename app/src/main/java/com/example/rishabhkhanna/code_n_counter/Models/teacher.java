@@ -3,9 +3,8 @@ package com.example.rishabhkhanna.code_n_counter.Models;
 /**
  * Created by rishabhkhanna on 03/09/16.
  */
-public class teacher {
+public class Teacher {
 
-    String teacherId;
     String username;
     String email;
     String password;
@@ -15,11 +14,11 @@ public class teacher {
     String contact;
 
 
-    public teacher() {
+    public Teacher() {
     }
 
 
-    public teacher(String username, String email, String password, String qualification, String workingAt, String age, String contact, String teacherId) {
+    public Teacher(String username, String email, String password, String qualification, String workingAt, String age, String contact) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -27,11 +26,6 @@ public class teacher {
         this.workingAt = workingAt;
         this.age = age;
         this.contact = contact;
-        this.teacherId = teacherId;
-    }
-
-    public String getTeacherId() {
-        return teacherId;
     }
 
     public String getUsername() {

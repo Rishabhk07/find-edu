@@ -12,7 +12,15 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="start new"
-        android:id="@+id/next"
+        android:text="Teacher Signup"
+        android:id="@+id/teacherSignup"
+        />
+
+    <Button
+        android:layout_below="@id/teacherSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="student Signup"
+        android:id="@+id/studentSignup"
         />
 </RelativeLayout>
