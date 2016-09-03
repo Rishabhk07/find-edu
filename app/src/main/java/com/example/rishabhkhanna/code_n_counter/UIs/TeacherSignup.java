@@ -40,7 +40,7 @@ public class TeacherSignup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher_login);
+        setContentView(R.layout.activity_teacher_sign_up);
         mAuth = FirebaseAuth.getInstance();
 
 
