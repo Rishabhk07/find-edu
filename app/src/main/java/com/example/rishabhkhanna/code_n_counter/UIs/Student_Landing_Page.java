@@ -27,7 +27,6 @@ public class Student_Landing_Page extends AppCompatActivity {
         bottomNavigation.addItem(item2);
         bottomNavigation.addItem(item3);
         bottomNavigation.addItem(item4);
-
         bottomNavigation.setBackgroundColor(Color.parseColor("#FEFEFE"));
     }
 }

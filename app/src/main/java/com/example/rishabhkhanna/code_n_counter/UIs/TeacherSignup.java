@@ -1,5 +1,6 @@
 package com.example.rishabhkhanna.code_n_counter.UIs;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -111,6 +112,9 @@ public class TeacherSignup extends AppCompatActivity {
                                     Teacher teacher  = new Teacher(username , email , password , qualification , workingAt ,age , contact  );
 
                                     ref.push().setValue(teacher);
+
+                                    Intent i = new Intent(TeacherSignup.this , TeacherLandingPage.class);
+                                    startActivity(i);
 
 
                                 }

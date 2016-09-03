@@ -18,7 +18,8 @@
         <activity android:name=".UIs.Student_Landing_Page" />
         <activity android:name=".UIs.TeacherSignup" />
         <activity android:name=".UIs.TeacherLandingPage" />
-        <activity android:name=".UIs.StudentSignUp"></activity>
+        <activity android:name=".UIs.StudentSignUp" />
+        <activity android:name=".UIs.New_Event"></activity>
     </application>
 
 </manifest>
