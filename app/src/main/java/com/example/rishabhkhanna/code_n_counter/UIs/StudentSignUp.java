@@ -30,7 +30,9 @@ public class StudentSignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_student_sign_up);
+
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextContact = (EditText) findViewById(R.id.editTextContact);
@@ -38,6 +40,7 @@ public class StudentSignUp extends AppCompatActivity {
         editTextInstitute = (EditText) findViewById(R.id.editTextInstitute);
         editTextAddress = (EditText) findViewById(R.id.editTextAddress);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+
         buttonSubmit  = (Button) findViewById(R.id.buttonSubmit);
         buttonOut = (Button) findViewById(R.id.buttonOut);
 

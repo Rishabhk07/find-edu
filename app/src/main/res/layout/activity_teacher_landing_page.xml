@@ -3,6 +3,8 @@
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:openDrawer="start"
 android:layout_height="match_parent"
 tools:context=".UIs.Student_Landing_Page">
 
@@ -32,11 +34,80 @@ tools:context=".UIs.Student_Landing_Page">
 <android.support.design.widget.NavigationView
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10sp"
     android:id="@+id/navigation_drawer"
+    android:background="@color/white"
+
+    android:fitsSystemWindows="true"
+
     android:layout_gravity = "start"
     android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+    android:padding="10sp"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    ></android.support.design.widget.NavigationView>
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:id="@+id/imageProfile"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        />
+
+        <EditText
+            android:layout_marginTop="3sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/name"
+            />
+
+        <EditText
+            android:layout_marginTop="3sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/E-mail"
+            />
+
+        <EditText
+            android:layout_marginTop="3sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/Institute"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45sp"
+            android:text="Update Profile"
+            android:textSize="20sp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="Sign Out"
+            android:textSize="20sp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+</android.support.design.widget.NavigationView>
 
 
 

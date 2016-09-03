@@ -5,100 +5,193 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UIs.TeacherSignup"
-    android:background="#333">
+    android:padding="10sp"
+    android:background="@drawable/back"
+    android:alpha="0.85"
+    >
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        >
-       <EditText
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="username"
-           android:ems="10"
-           android:layout_gravity="center"
-           android:id="@+id/usernameTeacher"
-           />
+            >
 
-        <EditText
+           <EditText
+               android:layout_width="match_parent"
+
+               android:textSize="20sp"
+               android:layout_marginTop="20sp"
+               android:layout_marginBottom="7sp"
+               android:padding="7sp"
+               android:textColorHint="@color/grey"
+               android:backgroundTint="@color/grey"
+               android:textColorHighlight="@color/grey"
+               android:hint="Name"
+               android:textColor="@color/white"
+
+               android:layout_height="wrap_content"
+
+               android:ems="10"
+               android:layout_gravity="center"
+               android:id="@+id/usernameTeacher"
+               />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="7sp"
+                android:padding="7sp"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:textColorHighlight="@color/grey"
+                android:hint="E-mail"
+                android:textColor="@color/white"
+                android:id="@+id/emailTeacher"
+                android:layout_gravity="center_horizontal"
+
+                />
+
+            <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Contact"
+               android:ems="10"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="7sp"
+                android:padding="7sp"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:textColorHighlight="@color/grey"
+
+                android:textColor="@color/white"
+
+                android:layout_gravity="center"
+                android:inputType="phone"
+                android:id="@+id/contactTeacher"
+               />
+
+            <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Qualification"
+               android:ems="10"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="7sp"
+                android:padding="7sp"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:textColorHighlight="@color/grey"
+
+                android:textColor="@color/white"
+
+                android:layout_gravity="center"
+                android:inputType="text"
+                android:id="@+id/qualificationTeacher"
+               />
+            <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Working At"
+               android:ems="10"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="7sp"
+                android:padding="7sp"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:textColorHighlight="@color/grey"
+
+                android:textColor="@color/white"
+
+                android:layout_gravity="center"
+                android:inputType="text"
+                android:id="@+id/workingAtTeacher"
+
+               />
+            <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/emailTeacher"
-            android:layout_gravity="center_horizontal"
-            android:hint="email"
-            />
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="7sp"
+                android:padding="7sp"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:textColorHighlight="@color/grey"
 
-        <EditText
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="contact"
-           android:ems="10"
-           android:layout_gravity="center"
-            android:inputType="phone"
-            android:id="@+id/contactTeacher"
-           />
+                android:textColor="@color/white"
 
-        <EditText
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="Qualification"
-           android:ems="10"
-           android:layout_gravity="center"
-            android:inputType="text"
-            android:id="@+id/qualificationTeacher"
-           />
-        <EditText
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="Working At"
-           android:ems="10"
-           android:layout_gravity="center"
-            android:inputType="text"
-            android:id="@+id/workingAtTeacher"
-
-           />
-        <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Age"
-        android:ems="10"
-        android:layout_gravity="center"
-        android:inputType="number"
-        android:id="@+id/age"
-
-        />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="password"
+                android:layout_height="wrap_content"
+            android:hint="Age"
             android:ems="10"
             android:layout_gravity="center"
-            android:inputType="textPassword"
-            android:id="@+id/passwordTeacher"
+            android:inputType="number"
+            android:id="@+id/age"
 
             />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SignUp"
-            android:id="@+id/signupTeacher"
-            />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:ems="10"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="7sp"
+                android:padding="7sp"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:textColorHighlight="@color/grey"
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log out"
-            android:id="@+id/logOut"
-            />
+                android:textColor="@color/white"
+
+                android:layout_gravity="center"
+                android:inputType="textPassword"
+                android:id="@+id/passwordTeacher"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SignUp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_weight="1"
+                    android:id="@+id/signupTeacher"
+                    />
+
+                <Button
+
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log out"
+                    android:id="@+id/logOut"
+                    />
 
 
 
-    </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
 
 
 
