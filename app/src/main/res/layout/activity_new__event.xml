@@ -27,14 +27,6 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="datetime"
-            android:id="@+id/dateEvent"
-            android:hint="date"
-            android:ems="10"
-            />
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:hint="description"
             android:ems="10"
             android:id="@+id/descriptionEvent"

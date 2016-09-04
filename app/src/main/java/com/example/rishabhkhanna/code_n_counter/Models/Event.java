@@ -5,10 +5,12 @@ package com.example.rishabhkhanna.code_n_counter.Models;
  */
 public class Event {
 
+    String eid;
     String eventName;
     String teacherId;
     String date;
     String description;
+    String count;
 
     public String getDescription() {
         return description;
@@ -19,15 +21,44 @@ public class Event {
     public Event() {
     }
 
-    public Event(String eventName, String teacherId, String date, String description, String topic) {
+    public void setCount(String count) {
+        this.count = count;
+    }
+
+    public String getCount() {
+
+        return count;
+    }
+
+    public String getEid() {
+        return eid;
+    }
+
+    public void setEid(String eid) {
+        this.eid = eid;
+    }
+
+    public Event(String eventName, String teacherId, String date, String description, String topic , String eid) {
+        this.eid = eid;
+
         this.eventName = eventName;
         this.teacherId = teacherId;
         this.date = date;
         this.description = description;
         this.topic = topic;
+        this.count = "0";
 
     }
 
+    public Event(String count,String date, String description ,String eid, String eventName, String teacherId, String topic) {
+        this.eid = eid;
+        this.eventName = eventName;
+        this.teacherId = teacherId;
+        this.date = date;
+        this.description = description;
+        this.count = count;
+        this.topic = topic;
+    }
 
     public String getEventName() {
         return eventName;

@@ -70,6 +70,26 @@
                 android:id="@+id/descriptionCardView"
             />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Count"
+                android:id="@+id/studentsCount"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_marginRight="36dp"
+                android:layout_marginEnd="36dp"
+                android:layout_above="@+id/teacheremailCardView" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Batch"
+                android:id="@+id/startBatch"
+                android:layout_alignTop="@+id/dateCardView"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView" />
 
 
         </RelativeLayout>

@@ -22,7 +22,6 @@
         <activity android:name=".UIs.New_Event" />
         <activity android:name=".UIs.Student_Login" />
         <activity android:name=".UIs.Teacher_Login" />
-        <activity android:name=".UIs.Discussion_Group"></activity>
     </application>
 
 </manifest>

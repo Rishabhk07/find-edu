@@ -55,11 +55,17 @@ public class New_Event extends AppCompatActivity {
                 String edescription = description.getText().toString();
                 String etopic= topic.getText().toString();
 
-                Event event = new Event(ename , eteacheremail , edate, edescription ,etopic );
+
 
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference ref = firebaseDatabase.getReference("events");
-                ref.push().setValue(event);
+
+                DatabaseReference refTeacherEvent =firebaseDatabase.getReference("TeacherData").child("events");
+
+
+                        String id = ref.push().getKey();
+                ref.child(id).setValue(new Event(ename , eteacheremail , edate, edescription ,etopic, id));
+                refTeacherEvent.child(id).setValue(new Event(ename , eteacheremail , edate, edescription ,etopic, id));
 
 
             }

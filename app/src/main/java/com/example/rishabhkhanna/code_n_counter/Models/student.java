@@ -10,14 +10,24 @@ public class student {
     private String institute;
     private int age;
     private String contact_information;
+    String studId;
 
-    public student(String username,String email,String password,String institue,int age,String contact_information) {
+    public student(String username,String email,String password,String institue,int age,String contact_information, String studId) {
         setUsername(username);
         setEmail(email);
         setPassword(password);
         setInstitute(institue);
         setAge(age);
         setContact_information(contact_information);
+        this.studId = studId;
+    }
+
+    public String getStudId() {
+        return studId;
+    }
+
+    public void setStudId(String studId) {
+        this.studId = studId;
     }
 
     public String getUsername() {

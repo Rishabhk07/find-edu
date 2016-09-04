@@ -90,8 +90,9 @@ public class StudentSignUp extends AppCompatActivity {
                                      DatabaseReference mDatabase;
                                      mDatabase = FirebaseDatabase.getInstance().getReference("StudentData");
                                      //Creating object of Student
-                                     student student = new student(username, email, password, institute, age, contact);
-                                     mDatabase.push().setValue(student);
+
+                                     String id = mDatabase.push().getKey();
+                                     mDatabase.child(id).setValue(new student(username, email, password, institute, age, contact, id));
                                  }
                             }
                         });

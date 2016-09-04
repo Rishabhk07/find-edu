@@ -99,9 +99,10 @@ public class TeacherSignup extends AppCompatActivity {
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                                     DatabaseReference ref = database.getReference("TeacherData");
 
-                                    Teacher teacher  = new Teacher(username , email , password , qualification , workingAt ,age , contact  );
 
-                                    ref.push().setValue(teacher);
+
+                                    String teachId = ref.push().getKey();
+                                    ref.child(teachId).setValue(new Teacher(username , email , password , qualification , workingAt ,age , contact , teachId ));
 
                                     Intent i = new Intent(TeacherSignup.this , TeacherLandingPage.class);
                                     startActivity(i);

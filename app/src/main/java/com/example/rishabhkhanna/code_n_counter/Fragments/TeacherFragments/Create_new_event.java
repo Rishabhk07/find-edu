@@ -1,18 +1,24 @@
 package com.example.rishabhkhanna.code_n_counter.Fragments.TeacherFragments;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.rishabhkhanna.code_n_counter.Models.Event;
 import com.example.rishabhkhanna.code_n_counter.R;
 import com.example.rishabhkhanna.code_n_counter.UIs.New_Event;
@@ -22,6 +28,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -33,6 +41,7 @@ import static com.example.rishabhkhanna.code_n_counter.R.layout.card_view_teache
 public class Create_new_event extends Fragment {
 
     FirebaseListAdapter mAdapter;
+    public String date;
 
 
     public Create_new_event() {
@@ -54,7 +63,10 @@ public class Create_new_event extends Fragment {
         final String teacherEmail = user.getEmail();
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference ref = firebaseDatabase.getReference("events");
+        DatabaseReference ref = firebaseDatabase.getReference("TeacherData").child("events");
+
+
+
 
 
         ref.keepSynced(true);
@@ -65,19 +77,57 @@ public class Create_new_event extends Fragment {
             protected void populateView(View v, Event model, int position) {
 
 
-
+                String
                 TextView ename = (TextView) v.findViewById(R.id.eventNameCardView);
                 TextView teacherMail = (TextView) v.findViewById(R.id.teacheremailCardView);
                 TextView date = (TextView) v.findViewById(R.id.dateCardView);
                 TextView description = (TextView) v.findViewById(R.id.descriptionCardView);
+                TextView count = (TextView) v.findViewById(R.id.studentsCount);
+
+                final Button startBatch = (Button) v.findViewById(R.id.startBatch);
+
+                    startBatch.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            startBatch.setText("started");
+                            startBatch.setEnabled(false);
+
+                            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                            builder.setTitle("Enter Name :");
+
+                            final EditText input_field = new EditText(getActivity());
+
+                            builder.setView(input_field);
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    date = input_field.getText().toString();
+                                }
+                            });
+
+                            builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(getActivity(), "cannot proceed without username", Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+
+                            builder.show();
 
 
 
+                        }
+                    });
 
 
+
+                    ename.setText(model.getEventName());
                     teacherMail.setText(model.getTeacherId());
                     date.setText(model.getDate());
                     description.setText(model.getDescription());
+                    count.setText(model.getCount());
 
                     mAdapter.notifyDataSetChanged();
 
