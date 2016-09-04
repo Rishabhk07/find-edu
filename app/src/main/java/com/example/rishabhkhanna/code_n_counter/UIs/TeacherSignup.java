@@ -83,48 +83,62 @@ public class TeacherSignup extends AppCompatActivity {
                 final String username = usernameTeacher.getText().toString();
                 final String contact = contactTeacher.getText().toString();
 
+                if (email == "")
+                    Toast.makeText(TeacherSignup.this, "Enter E-mail", Toast.LENGTH_SHORT).show();
+                else if (password == "")
+                    Toast.makeText(TeacherSignup.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                else if (username == "")
+                    Toast.makeText(TeacherSignup.this, "Enter Username", Toast.LENGTH_SHORT).show();
+                else if (qualification == "")
+                    Toast.makeText(TeacherSignup.this, "Enter Qualification", Toast.LENGTH_SHORT).show();
+                else if (contact == "")
+                    Toast.makeText(TeacherSignup.this, "Enter Contact", Toast.LENGTH_SHORT).show();
+                else if (age == "")
+                    Toast.makeText(TeacherSignup.this, "Enter Age", Toast.LENGTH_SHORT).show();
+                else if( workingAt == "")
+                    Toast.makeText(TeacherSignup.this,"Enter Work Place",Toast.LENGTH_SHORT).show();
+                else {
 
 
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(TeacherSignup.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                    Log.d("Sign Up complete ", "email: " + task.isSuccessful());
+
+                                    if (task.isSuccessful()) {
+
+                                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                        DatabaseReference ref = database.getReference("TeacherData");
 
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(TeacherSignup.this , new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                        String teachId = ref.push().getKey();
+                                        ref.child(teachId).setValue(new Teacher(username, email, password, qualification, workingAt, age, contact, teachId));
 
-                                Log.d("Sign Up complete " , "email: " +task.isSuccessful());
-
-                                if(task.isSuccessful()){
-
-                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                    DatabaseReference ref = database.getReference("TeacherData");
+                                        Intent i = new Intent(TeacherSignup.this, TeacherLandingPage.class);
+                                        startActivity(i);
 
 
+                                    }
 
-                                    String teachId = ref.push().getKey();
-                                    ref.child(teachId).setValue(new Teacher(username , email , password , qualification , workingAt ,age , contact , teachId ));
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(TeacherSignup.this, "couldnt sign up now, try again later", Toast.LENGTH_SHORT).show();
+                                        task.addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                        });
 
-                                    Intent i = new Intent(TeacherSignup.this , TeacherLandingPage.class);
-                                    startActivity(i);
+                                    }
 
 
                                 }
-
-                                if(!task.isSuccessful()){
-                                    Toast.makeText(TeacherSignup.this, "couldnt sign up now, try again later", Toast.LENGTH_SHORT).show();
-                                    task.addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            e.printStackTrace();
-                                        }
-                                    });
-
-                                }
-
-
-                            }
-                        });
+                            });
+                }
             }
+
         });
 
 

@@ -63,11 +63,12 @@ public class StudentFragmentEvents extends Fragment {
                 TextView description = (TextView) v.findViewById(R.id.descriptionCardView);
 
 
-                Button addme = (Button) v.findViewById(R.id.addme);
+                final Button addme = (Button) v.findViewById(R.id.addme);
 
                 addme.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        addme.setEnabled(false);
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
                         DatabaseReference ref = database.getReference("events");
                         DatabaseReference refTeacher = database.getReference("TeacherData").child("events");

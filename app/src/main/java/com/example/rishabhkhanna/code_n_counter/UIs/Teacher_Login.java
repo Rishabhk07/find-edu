@@ -71,25 +71,30 @@ public class Teacher_Login extends AppCompatActivity {
 
                 String emailString = email.getText().toString();
                 String passwordString = password.getText().toString();
+                if (emailString == "")
+                    Toast.makeText(Teacher_Login.this, "Enter E-Mail", Toast.LENGTH_SHORT).show();
+                else if (passwordString == "")
+                    Toast.makeText(Teacher_Login.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                else {
+                    mAuth.signInWithEmailAndPassword(emailString, passwordString)
+                            .addOnCompleteListener(Teacher_Login.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
 
-                mAuth.signInWithEmailAndPassword(emailString , passwordString)
-                        .addOnCompleteListener(Teacher_Login.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(Teacher_Login.this, "Login failed", Toast.LENGTH_SHORT).show();
 
-                                if(!task.isSuccessful()){
-                                    Toast.makeText(Teacher_Login.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                    if (task.isSuccessful()) {
+                                        Intent i = new Intent(Teacher_Login.this
+                                                , TeacherLandingPage.class);
+                                        startActivity(i);
+                                    }
 
                                 }
-                                if(task.isSuccessful()){
-                                    Intent i = new Intent(Teacher_Login.this
-                                            , TeacherLandingPage.class);
-                                    startActivity(i);
-                                }
+                            });
 
-                            }
-                        });
-
+                }
             }
         });
 
@@ -109,4 +114,3 @@ public class Teacher_Login extends AppCompatActivity {
         mAuth.removeAuthStateListener(mAuthstateListner);
     }
 }
-

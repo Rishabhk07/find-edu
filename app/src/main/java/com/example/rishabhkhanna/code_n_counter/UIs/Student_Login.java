@@ -1,3 +1,4 @@
+
 package com.example.rishabhkhanna.code_n_counter.UIs;
 
 import android.content.Intent;
@@ -66,25 +67,32 @@ public class Student_Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
                 String emailString = email.getText().toString();
                 String passwordString = password.getText().toString();
 
-                mAuth.signInWithEmailAndPassword(emailString , passwordString)
-                        .addOnCompleteListener(Student_Login.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (emailString == "")
+                    Toast.makeText(Student_Login.this, "Enter E-Mail", Toast.LENGTH_SHORT).show();
+                else if (passwordString == "")
+                    Toast.makeText(Student_Login.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                else {
+                    mAuth.signInWithEmailAndPassword(emailString, passwordString)
+                            .addOnCompleteListener(Student_Login.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
 
-                                if(!task.isSuccessful()){
-                                    Toast.makeText(Student_Login.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(Student_Login.this, "Login failed", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                    if (task.isSuccessful()) {
+                                        Intent i = new Intent(Student_Login.this, Student_Landing_Page.class);
+                                        startActivity(i);
+                                    }
 
                                 }
-                                if(task.isSuccessful()){
-                                    Intent i = new Intent(Student_Login.this , Student_Landing_Page.class);
-                                    startActivity(i);
-                                }
-
-                            }
-                        });
+                            });
+                }
             }
         });
 

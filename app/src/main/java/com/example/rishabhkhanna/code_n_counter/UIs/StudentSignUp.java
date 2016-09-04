@@ -74,29 +74,43 @@ public class StudentSignUp extends AppCompatActivity {
                 final String password = editTextPassword.getText().toString();
                 final String username = editTextName.getText().toString();
                 final String institute = editTextInstitute.getText().toString();
-                final String contact  = editTextContact.getText().toString();
+                final String contact = editTextContact.getText().toString();
                 final int age = Integer.parseInt(editTextAge.getText().toString());
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(StudentSignUp.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+                if (email == "")
+                    Toast.makeText(StudentSignUp.this, "Enter E-mail", Toast.LENGTH_SHORT).show();
+                else if (password == "")
+                    Toast.makeText(StudentSignUp.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                else if (username == "")
+                    Toast.makeText(StudentSignUp.this, "Enter Username", Toast.LENGTH_SHORT).show();
+                else if (institute == "")
+                    Toast.makeText(StudentSignUp.this, "Enter Institute", Toast.LENGTH_SHORT).show();
+                else if (contact == "")
+                    Toast.makeText(StudentSignUp.this, "Enter Contact", Toast.LENGTH_SHORT).show();
+                else if (age == 0)
+                    Toast.makeText(StudentSignUp.this, "Enter Age", Toast.LENGTH_SHORT).show();
+                else {
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(StudentSignUp.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
 
-                                if (!task.isSuccessful()) {
-                                    Toast.makeText(StudentSignUp.this,"Failed",Toast.LENGTH_SHORT).show();
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(StudentSignUp.this, "Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                    if (task.isSuccessful()) {
+                                        DatabaseReference mDatabase;
+                                        mDatabase = FirebaseDatabase.getInstance().getReference("StudentData");
+                                        //Creating object of Student
+
+                                        String id = mDatabase.push().getKey();
+                                        mDatabase.child(id).setValue(new student(username, email, password, institute, age, contact, id));
+                                    }
                                 }
-                                 if(task.isSuccessful()) {
-                                     DatabaseReference mDatabase;
-                                     mDatabase = FirebaseDatabase.getInstance().getReference("StudentData");
-                                     //Creating object of Student
+                            });
 
-                                     String id = mDatabase.push().getKey();
-                                     mDatabase.child(id).setValue(new student(username, email, password, institute, age, contact, id));
-                                 }
-                            }
-                        });
-
+                }
             }
         });
 

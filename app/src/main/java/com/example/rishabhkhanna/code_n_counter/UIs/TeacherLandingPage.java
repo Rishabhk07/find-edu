@@ -8,11 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.rishabhkhanna.code_n_counter.Fragments.TeacherFragments.Create_new_event;
 import com.example.rishabhkhanna.code_n_counter.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class TeacherLandingPage extends AppCompatActivity {
 
@@ -24,6 +27,20 @@ public class TeacherLandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_landing_page);
         bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigationTeacher);
+//
+//        TextView name = (TextView) findViewById(R.id.nameNav);
+//        TextView email = (TextView) findViewById(R.id.emailNav);
+//
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        String nameS = user.getDisplayName().toString();
+//        String emailS = user.getEmail().toString();
+//
+//        name.setText(nameS);
+//        email.setText(emailS);
+
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
         AHBottomNavigationItem item1 = new AHBottomNavigationItem("Create new Eve" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimaryDark);
         AHBottomNavigationItem item2 = new AHBottomNavigationItem("users" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimary);

@@ -4,13 +4,19 @@ import android.graphics.Color;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.rishabhkhanna.code_n_counter.Fragments.TeacherFragments.Create_new_event;
 import com.example.rishabhkhanna.code_n_counter.Fragments.TeacherFragments.studentFragment.StudentFragmentEvents;
 import com.example.rishabhkhanna.code_n_counter.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import org.w3c.dom.Text;
 
 public class Student_Landing_Page extends AppCompatActivity {
 
@@ -25,6 +31,8 @@ public class Student_Landing_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing__page);
         bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigation);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
         AHBottomNavigationItem item1 = new AHBottomNavigationItem("Teachers" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimaryDark);
         AHBottomNavigationItem item2 = new AHBottomNavigationItem("Users" , R.drawable.ic_account_circle_grey_700_18dp , R.color.colorPrimary);
@@ -36,6 +44,19 @@ public class Student_Landing_Page extends AppCompatActivity {
         bottomNavigation.addItem(item3);
         bottomNavigation.addItem(item4);
         bottomNavigation.setBackgroundColor(Color.parseColor("#FEFEFE"));
+
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//
+//        TextView name = (TextView) findViewById(R.id.nameNavStudent);
+//        TextView email = (TextView) findViewById(R.id.emailNavStudent);
+//
+//        String nameSt = user.getDisplayName();
+//
+//        String emailSt = user.getEmail();
+//
+//        name.setText(nameSt);
+//        email.setText(emailSt);
+
 
 
         studentFrame = (FrameLayout) findViewById(R.id.studentLandingPage);
