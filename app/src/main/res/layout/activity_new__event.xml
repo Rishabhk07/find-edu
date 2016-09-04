@@ -3,69 +3,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#333"
     tools:context="com.example.rishabhkhanna.code_n_counter.UIs.New_Event">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:padding="10sp"
+        android:layout_marginRight="20sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical"
+
+
         >
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Event name"
-        android:ems="10"
-        android:id="@+id/eventNameCardView"
-        />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="your email"
-            android:id="@+id/emailEventTeacher"
-            android:ems="10"
+            android:hint="Event name"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:ems="15"
+            android:id="@+id/eventNameCardView"
+            android:textColorHint="@color/grey"
             />
         <EditText
             android:layout_width="wrap_content"
+            android:textColorHint="@color/grey"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+
             android:layout_height="wrap_content"
-            android:hint="description"
-            android:ems="10"
+            android:hint="Description"
+            android:ems="15"
             android:id="@+id/descriptionEvent"
             />
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="topic"
-            android:ems="10"
+            android:hint="Topic"
+            android:ems="15"
             android:id="@+id/topicEvent"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
             />
 
         <EditText
+            android:textColorHint="@color/grey"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:ems="15"
             android:id="@+id/min"
-            android:hint="minimum students"
+            android:hint="Minimum Students"
             android:inputType="number"
             />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="add Location"
-            android:layout_weight="1"
-            android:id="@+id/addLocation"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="add Event"
-            android:id="@+id/addEvent"
-            android:layout_weight="1"/>
+            android:layout_marginTop="20sp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add Location"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/button_style_grey"
+                android:textColor="@drawable/button_style_grey_text"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:id="@+id/addLocation"
+                />
+            <Button
 
-    </LinearLayout>
+                android:background="@drawable/button_style_grey"
+                android:textColor="@drawable/button_style_grey_text"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="15sp"
+                android:layout_marginLeft="15sp"
+
+                android:layout_height="wrap_content"
+                android:text="add Event"
+                android:id="@+id/addEvent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

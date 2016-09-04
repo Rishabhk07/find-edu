@@ -38,23 +38,21 @@ public class Event {
         this.eid = eid;
     }
 
-    public Event(String eventName, String teacherId, String date, String description, String topic , String eid) {
+    public Event(String eventName, String teacherId, String description, String topic , String eid) {
         this.eid = eid;
 
         this.eventName = eventName;
         this.teacherId = teacherId;
-        this.date = date;
         this.description = description;
         this.topic = topic;
         this.count = "0";
 
     }
 
-    public Event(String count,String date, String description ,String eid, String eventName, String teacherId, String topic) {
+    public Event(String count, String description ,String eid, String eventName, String teacherId, String topic) {
         this.eid = eid;
         this.eventName = eventName;
         this.teacherId = teacherId;
-        this.date = date;
         this.description = description;
         this.count = count;
         this.topic = topic;

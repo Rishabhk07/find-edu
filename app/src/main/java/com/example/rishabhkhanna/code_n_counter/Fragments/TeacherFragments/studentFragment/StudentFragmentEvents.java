@@ -59,7 +59,7 @@ public class StudentFragmentEvents extends Fragment {
 
                 TextView ename = (TextView) v.findViewById(R.id.eventNameCardView);
                 TextView teacherMail = (TextView) v.findViewById(R.id.teacheremailCardView);
-                TextView date = (TextView) v.findViewById(R.id.dateCardView);
+
                 TextView description = (TextView) v.findViewById(R.id.descriptionCardView);
 
 
@@ -84,9 +84,9 @@ public class StudentFragmentEvents extends Fragment {
 
 
 
-
+                ename.setText(model.getEventName());
                 teacherMail.setText(model.getTeacherId());
-                date.setText(model.getDate());
+
                 description.setText(model.getDescription());
 
                 mAdapter.notifyDataSetChanged();

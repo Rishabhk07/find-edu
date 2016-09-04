@@ -41,7 +41,7 @@ import static com.example.rishabhkhanna.code_n_counter.R.layout.card_view_teache
 public class Create_new_event extends Fragment {
 
     FirebaseListAdapter mAdapter;
-    public String date;
+    public String dateString;
 
 
     public Create_new_event() {
@@ -63,7 +63,9 @@ public class Create_new_event extends Fragment {
         final String teacherEmail = user.getEmail();
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference ref = firebaseDatabase.getReference("TeacherData").child("events");
+        final DatabaseReference ref = firebaseDatabase.getReference("TeacherData").child("events");
+
+
 
 
 
@@ -74,13 +76,12 @@ public class Create_new_event extends Fragment {
 
         mAdapter = new FirebaseListAdapter<Event>(getActivity(), Event.class , R.layout.card_view_teacher , ref ) {
             @Override
-            protected void populateView(View v, Event model, int position) {
+            protected void populateView(View v, final Event model, int position) {
 
 
-                String
+
                 TextView ename = (TextView) v.findViewById(R.id.eventNameCardView);
                 TextView teacherMail = (TextView) v.findViewById(R.id.teacheremailCardView);
-                TextView date = (TextView) v.findViewById(R.id.dateCardView);
                 TextView description = (TextView) v.findViewById(R.id.descriptionCardView);
                 TextView count = (TextView) v.findViewById(R.id.studentsCount);
 
@@ -92,9 +93,9 @@ public class Create_new_event extends Fragment {
                             startBatch.setText("started");
                             startBatch.setEnabled(false);
 
-                            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-                            builder.setTitle("Enter Name :");
+                            builder.setTitle("Enter Date: ");
 
                             final EditText input_field = new EditText(getActivity());
 
@@ -102,7 +103,9 @@ public class Create_new_event extends Fragment {
                             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    date = input_field.getText().toString();
+                                    dateString = input_field.getText().toString();
+                                    ref.child("eventsStarted").setValue(model.getEid());
+
                                 }
                             });
 
@@ -125,7 +128,6 @@ public class Create_new_event extends Fragment {
 
                     ename.setText(model.getEventName());
                     teacherMail.setText(model.getTeacherId());
-                    date.setText(model.getDate());
                     description.setText(model.getDescription());
                     count.setText(model.getCount());
 

@@ -29,8 +29,7 @@ public class New_Event extends AppCompatActivity {
         setContentView(R.layout.activity_new__event);
 
         eventName = (EditText) findViewById(R.id.eventNameCardView);
-        teacherEmail = (EditText) findViewById(R.id.emailEventTeacher);
-        date = (EditText) findViewById(R.id.dateEvent);
+
         description = (EditText) findViewById(R.id.descriptionEvent);
         topic = (EditText) findViewById(R.id.topicEvent);
 
@@ -49,9 +48,6 @@ public class New_Event extends AppCompatActivity {
                 String ename = eventName.getText().toString();
                 String eteacheremail = user.getEmail();
 
-                teacherEmail.setText(eteacheremail);
-
-                String edate = date.getText().toString();
                 String edescription = description.getText().toString();
                 String etopic= topic.getText().toString();
 
@@ -64,8 +60,8 @@ public class New_Event extends AppCompatActivity {
 
 
                         String id = ref.push().getKey();
-                ref.child(id).setValue(new Event(ename , eteacheremail , edate, edescription ,etopic, id));
-                refTeacherEvent.child(id).setValue(new Event(ename , eteacheremail , edate, edescription ,etopic, id));
+                ref.child(id).setValue(new Event(ename , eteacheremail , edescription ,etopic, id));
+                refTeacherEvent.child(id).setValue(new Event(ename , eteacheremail , edescription ,etopic, id));
 
 
             }

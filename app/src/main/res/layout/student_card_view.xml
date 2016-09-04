@@ -46,42 +46,28 @@
                 android:id="@+id/teacheremailCardView"
                 android:layout_marginTop="5dp"
                 />
-            <TextView
+
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="#333"
-                android:layout_below="@id/teacheremailCardView"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/dateCardView"
-                />
+                android:text="Add me"
+                android:id="@+id/addme"
+
+                android:layout_alignBottom="@+id/teacheremailCardView"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="#333"
-                android:layout_below="@id/dateCardView"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
                 android:id="@+id/descriptionCardView"
-                />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add me"
-                android:layout_alignBottom="@+id/dateCardView"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="50dp"
-                android:id="@+id/addme"
-
-                />
-
+                android:layout_below="@+id/teacheremailCardView"
+                android:layout_alignLeft="@+id/imageView"
+                android:layout_alignStart="@+id/imageView"
+                android:layout_marginTop="10dp"/>
 
 
         </RelativeLayout>
